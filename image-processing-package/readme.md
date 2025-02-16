@@ -1,0 +1,83 @@
+# Image Processing Package
+
+## Descripción
+Este paquete proporciona herramientas básicas para el procesamiento de imágenes, incluyendo:
+- Carga y visualización de imágenes.
+- Conversión a escala de grises.
+- Redimensionamiento.
+- Aplicación de desenfoque (blur).
+
+## Instalación
+Puedes instalar el paquete desde TestPyPI con el siguiente comando:
+
+```bash
+pip install --index-url https://test.pypi.org/simple/ image-processing-package
+```
+
+## Requisitos
+Este paquete requiere las siguientes bibliotecas:
+
+```bash
+pip install numpy opencv-python matplotlib
+```
+
+## Uso
+
+### Cargar y mostrar una imagen
+```python
+from image_processing.utils.image_utils import load_image, show_image
+
+image_path = "ruta_de_tu_imagen.jpg"
+image = load_image(image_path)
+show_image(image, "Imagen Original")
+```
+
+### Convertir a escala de grises
+```python
+from image_processing.processing.image_processing import convert_to_grayscale
+
+gray_image = convert_to_grayscale(image)
+show_image(gray_image, "Imagen en Escala de Grises")
+```
+
+### Redimensionar una imagen
+```python
+from image_processing.processing.image_processing import resize_image
+
+resized_image = resize_image(image, 100, 100)
+show_image(resized_image, "Imagen Redimensionada")
+```
+
+### Aplicar desenfoque
+```python
+from image_processing.processing.image_processing import apply_blur
+
+blurred_image = apply_blur(image)
+show_image(blurred_image, "Imagen Desenfocada")
+```
+
+## Estructura del paquete
+```
+image-processing-package/
+│── image_processing/
+│   ├── processing/
+│   │   ├── __init__.py
+│   │   ├── image_processing.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── image_utils.py
+│── readme.md
+│── setup.py
+│── main.py
+```
+
+## Contribuciones
+Las contribuciones son bienvenidas. Si deseas mejorar este paquete, crea un **pull request** o reporta problemas en el repositorio.
+
+
+## Autor
+- **Alex Eduardo Nocua Sema** - [GitHub](https://github.com/AlexNocua)
+
+---
+¡Disfruta usando Image Processing Package! 🚀
+
