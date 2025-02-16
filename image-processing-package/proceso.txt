@@ -1,0 +1,15 @@
+Comandos de instalacion-------------
+python -m pip install --upgrade pip
+python -m pip install --user twine
+python -m pip install --user setuptools
+
+Comando para crear las distribuciones-----------
+python setup.py sdist bdist_wheel
+
+Publicar en testpypi------
+python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+Publicar en pypi------
+python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+
+Tener en cuenta el tocken para el cargue de los mismos en las plataformas y el versonamiento de los mismos desde la version del setup.py.
